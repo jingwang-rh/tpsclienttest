@@ -23,7 +23,11 @@
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+<<<<<<< HEAD
 export TEST=/tools/tpsclienttest
+=======
+export TEST=/tools/tpsclienttest/.
+>>>>>>> 82f9cbbce93af5e8397003655904e4867f57eba2
 export TESTVERSION=1.0
 
 BUILT_FILES=
@@ -52,6 +56,11 @@ $(METADATA): Makefile
 	@echo "Description:     test tps client" >> $(METADATA)
 	@echo "Type:            Sanity" >> $(METADATA)
 	@echo "TestTime:        1h" >> $(METADATA)
+<<<<<<< HEAD
+=======
+	@echo "RunFor:          tpsclienttest" >> $(METADATA)
+	@echo "Requires:        tpsclienttest" >> $(METADATA)
+>>>>>>> 82f9cbbce93af5e8397003655904e4867f57eba2
 	@echo "Priority:        Normal" >> $(METADATA)
 	@echo "License:         Red Hat Internal" >> $(METADATA)
 	@echo "Confidential:    no" >> $(METADATA)
