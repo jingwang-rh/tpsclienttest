@@ -28,7 +28,7 @@ sed -i "N;4iERRATA_XMLRPC='${et_server}'" /etc/tpsd.conf
 # Run command get-packages to verify if tps-devel has been installed successfully
 # Could return new files list for this example advs:
 # https://et-system-test-qe-01.usersys.redhat.com/advisory/45121
-get-packages -e 2019:45121
+get-packages -e 2019:41043
 
 # Configure oats.conf
 sed -i 's/ONBOOT=1/#ONBOOT=1/' /etc/sysconfig/oats.conf
@@ -64,4 +64,4 @@ update-tpsd-settings
 
 mkdir -p /tmp/testtps
 cd /tmp/testtps
-tps 2019:42304
+tps 2019:41043
