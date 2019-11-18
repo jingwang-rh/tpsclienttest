@@ -45,10 +45,14 @@ oats-apply-test-profile -b -w -d -t "${test_profile}"
 # Check the client on tps-devel server, it is there with correct test_profile and no errors in log.(http://tps-devel.app.eng.bos.redhat.com/systems/2970)
 
 # oats-config-nfs
+echo "oats-config-nfs"
+oats-config-nfs
 oats-config-nfs
 
 # Change to another nfs server for path  /mnt/qa/scratch, which records the test results
 # Make sure the nfs server has been done, refer to doc https://docs.engineering.redhat.com/x/FGfVAg
+echo "mount -v -t nfs 10.66.137.18:/web/mnt/qa/scratch /mnt/qa/scratch"
+mkdir -p /mnt/qa/scratch
 mount -v -t nfs 10.66.137.18:/web/mnt/qa/scratch /mnt/qa/scratch
 
 # Identify command tps-cd
@@ -56,7 +60,7 @@ source /etc/profile.d/tps-cd.sh
 
 # Refresh this cache file '/var/cache/tps/settings/tps_server.conf'
 export TPSSERV_ENV=devel
-Update-tpsd-settings
+update-tpsd-settings
 
 mkdir -p /tmp/testtps
 cd /tmp/testtps
