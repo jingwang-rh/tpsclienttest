@@ -24,7 +24,7 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 export TEST=/tools/tpsclienttest
-export TESTVERSION=1.1
+export TESTVERSION=1.5
 
 BUILT_FILES=
 
@@ -56,6 +56,6 @@ $(METADATA): Makefile
 	@echo "License:         Red Hat Internal" >> $(METADATA)
 	@echo "Confidential:    no" >> $(METADATA)
 	@echo "Destructive:     no" >> $(METADATA)
-	@echo "Releases:        -RHEL4 -RHELClient5 -RHELServer5" >> $(METADATA)
+	@echo "Releases:        -RHEL4" >> $(METADATA)
 
 	rhts-lint $(METADATA)
