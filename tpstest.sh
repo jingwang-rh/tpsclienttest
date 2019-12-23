@@ -54,9 +54,9 @@ oats-config-nfs
 
 # Change to another nfs server for path  /mnt/qa/scratch, which records the test results
 # Make sure the nfs server has been done, refer to doc https://docs.engineering.redhat.com/x/FGfVAg
-echo "mount -v -t nfs 10.66.137.18:/web/mnt/qa/scratch /mnt/qa/scratch"
+echo "mount -v -t nfs 10.0.150.174:/web/mnt/qa/scratch /mnt/qa/scratch"
 mkdir -p /mnt/qa/scratch
-mount -v -t nfs 10.66.137.18:/web/mnt/qa/scratch /mnt/qa/scratch
+mount -v -t nfs 10.0.150.174:/web/mnt/qa/scratch /mnt/qa/scratch
 
 # Identify command tps-cd
 source /etc/profile.d/tps-cd.sh
